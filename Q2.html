@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./jquery-3.6.0.js">  </script>
+      <script>
+        console.log("hiiii");
+        $().ready(()=>{
+             
+            $("#click").click(()=>{
+                let str = document.getElementById("textfield").value;
+                let revstr = str.split("").reverse().join("");
+                console.log(revstr);
+                $("#p1").html(`Result : ${revstr}`);
+            })
+        })
+       
+    </script>
+
+</head>
+<body>
+    <div class="text-center" style="margin-top: 10%;">
+    <label  for="textfield"><h5>Enter String Here : </h5></label><br><br>
+    <input required type="text" id="textfield" placeholder="enter here"><br><br>
+    <input class="btn btn-outline-primary" id="click" type="button" name="Click here!" value="Click Here!">
+     </div>
+     <p class="text-center" id="p1" style="margin-top: 5%;"> </p>
+</body>
+</html>
